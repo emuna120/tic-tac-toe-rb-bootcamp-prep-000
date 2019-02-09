@@ -57,3 +57,9 @@ def turn(board)
     display_board(board)
   end  
 end
+
+def turn_count(board) 
+  count_x = board.count("X") 
+  count_o = board.count("O")
+  count_x + count_o
+end  
