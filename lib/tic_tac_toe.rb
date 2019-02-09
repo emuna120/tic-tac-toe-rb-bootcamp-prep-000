@@ -24,8 +24,8 @@ def input_to_index(user_input)
   else
     user_input_int = user_input.to_i
   end  
-  return -1 if (user_input_int <= 0 || user_input_int > 9 || user_input.length > 1)
-  return (user_input_int - 1)
+  return -1 if user_input.length > 1
+  user_input_int - 1
 end 
 
 def move(board, position, player = "X")
@@ -35,7 +35,7 @@ def move(board, position, player = "X")
   else
     puts "position already taken, next player please"
   end
-  return board
+  board
 end  
 
 def position_taken?(board, index)
@@ -44,4 +44,5 @@ end
 
 def valid_move?(board, index)
   index.between?(0, 8) && !(position_taken(board, index))
-end  
+end
+
