@@ -109,4 +109,9 @@ def play(board)
   end
   if won?(board)
     puts "welldone #{winner(board)}"
+  elsif draw?(board)
+    puts "the game is a draw"
+  else
+    
+  end  
 end  
